@@ -444,6 +444,11 @@ footer p > span {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
 
+    .surprise__menu {
+        top: 130px;
+        left: 0;
+    }
+
     .second .about .blue {
         font-size: 12px;
     }
@@ -461,10 +466,6 @@ footer p > span {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-
-    .surprise__menu {
-        left: 10%;
-    }
 
     .first span {
         left: 15px;
