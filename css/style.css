@@ -576,6 +576,10 @@ footer p > span {
         width: 100%;
     }
 
+    .fifth .social-icons > li {
+        margin: 0 30px 40px 30px;
+    }
+
     .contact .contact__input {
         margin: 0;
     }
