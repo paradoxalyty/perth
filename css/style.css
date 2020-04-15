@@ -2,6 +2,8 @@ h2 {font-size: 40px;}
 p {font-size: 16px;}
 section {overflow: hidden;}
 button > img {margin: 13px;}
+button:focus {outline: none}
+.btn-default:focus {outline: none}
 
 
 
@@ -303,11 +305,34 @@ button > img {margin: 13px;}
     position: relative;
     padding-top: 240px;
     padding-bottom: 240px;
+    font-style: italic;
 }
 
-.fifth  .social-icons > li {
+.fifth .social-icons {
+    padding: 0;
+}
+
+.fifth .social-icons > li {
     display: inline-block;
-    margin: 0 35px 60px 35px;
+    border: 3px solid #545454;
+    border-radius: 50%;
+    margin: 0 20px 60px 20px;
+}
+
+.dribbble:hover {
+    background: #ea4c89;
+}
+
+.facebook:hover {
+    background: #39569c;
+}
+
+.twitter:hover {
+    background: #00acee;
+}
+
+.mail:hover {
+    background: #0088cc;
 }
 
 .input > span {
@@ -315,10 +340,58 @@ button > img {margin: 13px;}
     font-weight: bold;
 }
 
-.contact .input > input {
+.contact__label {
+    position: relative;
+}
+
+.contact__label:after {
+    position: absolute;
+    top: 50%;
+    right: 47px;
+    width: 2px;
+    height: 15px;
+    background-color: #e2e2e2;
+
+    -webkit-transform: translateY(-50%);
+    /*-moz-transform: translateY(-50%);*/
+    -ms-transform: translateY(-50%);
+    /*-o-transform: translateY(-50%);*/
+    transform: translateY(-50%);
+
+    content: "";
+}
+
+.contact__input {
     margin-left: 45px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
     text-align: left;
-    background: url("../images/mail-icon-2.png") no-repeat center right;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    /*background-color: #fff;*/
+    /*background-position: 92% 50%;*/
+    /*background-image: url("../images/mail-icon-2.png");*/
+    /*background-repeat: no-repeat;*/
+    background: #fff url("../images/mail-icon-2.png") no-repeat 92% center;
+}
+
+.contact__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #d3d3d3;
+}
+.contact__input::-moz-placeholder { /* Firefox 19+ */
+    color: #d3d3d3;
+}
+.contact__input:-ms-input-placeholder { /* IE 10+ */
+    color: #d3d3d3;
+}
+.contact__input:-moz-placeholder { /* Firefox 18- */
+    color: #d3d3d3;
+}
+
+.contact__input:focus {
+    outline: none;
 }
 
 
@@ -501,5 +574,9 @@ footer p > span {
     .third span img {
 
         width: 100%;
+    }
+
+    .contact .contact__input {
+        margin: 0;
     }
 }
